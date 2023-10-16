@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.pablo.reciclar.R
-import com.pablo.reciclar.databinding.LugarViewBinding
-import com.pablo.reciclar.model.Lugar
+import com.lsegura.recyclerintent2.R
+import com.lsegura.recyclerintent2.databinding.LugarViewBinding
+import com.lsegura.recyclerintent2.model.Lugar
 
 class LugarAdapter(val lugares: List<Lugar>, val listener: (Lugar) ->Unit) :
     RecyclerView.Adapter<LugarAdapter.ViewHolder>() {

@@ -1,19 +1,18 @@
-package com.lsegura.RecyclerIntent2.ui
+package com.lsegura.recyclerintent2.ui
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.lsegura.recyclerintent2.databinding.ActivityMainBinding
 import com.lsegura.recyclerintent2.model.Lugar
-import com.pablo.reciclar.databinding.ActivityMainBinding
-import com.pablo.reciclar.model.Lugar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater).apply {
             setContentView(root)
-            recycle.adapter = LugarAdapter(lugares) { lugar ->
+            recyclerView.adapter = LugarAdapter(lugares) { lugar ->
 
                 val latLng = "${lugar.latitud},${lugar.longitud}"
                 val uri = "geo:$latLng?q=${Uri.encode(lugar.nombre)}"
